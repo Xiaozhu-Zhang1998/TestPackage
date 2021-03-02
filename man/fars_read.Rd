@@ -27,5 +27,4 @@ The directory of the file should be the same as the working
  fars_read("accident_2013.csv")
 }
 
-
 }

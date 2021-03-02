@@ -18,6 +18,9 @@
 #'  fars_read("accident_2013.csv")
 #' }
 #'
+#' @importFrom readr read_csv
+#' @importFrom dplyr tbl_df
+#'
 #' @export
 fars_read <- function(filename) {
   if(!file.exists(filename))
@@ -71,7 +74,9 @@ make_filename <- function(year) {
 #'  fars_read_years(c(2013,2016))
 #' }
 #'
-#' @import magrittr
+#' @importFrom magrittr %>%
+#' @importFrom dplyr mutate
+#' @importFrom dplyr select
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -110,7 +115,11 @@ fars_read_years <- function(years) {
 #'  fars_summarize_years(c(2013,2015))
 #' }
 #'
-#' @import magrittr
+#' @importFrom magrittr %>%
+#' @importFrom dplyr bind_rows
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarize
+#' @importFrom tidyr spread
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -143,6 +152,10 @@ fars_summarize_years <- function(years) {
 #'  fars_map_state(5, 2014)
 #'  fars_map_state(3, 2013)
 #' }
+#'
+#' @importFrom dplyr filter
+#' @importFrom maps map
+#' @importFrom graphics points
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
