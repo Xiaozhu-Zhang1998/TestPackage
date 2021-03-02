@@ -1,5 +1,4 @@
-# TestPackage
-[![Build Status](https://travis-ci.org/Xiaozhu-Zhang1998/TestPackage.svg?branch=master)](https://travis-ci.org/Xiaozhu-Zhang1998/TestPackage)
+# TestPackage   [![Build Status](https://travis-ci.org/Xiaozhu-Zhang1998/TestPackage.svg?branch=master)](https://travis-ci.org/Xiaozhu-Zhang1998/TestPackage)
 This is a small test package for R, including 5 functions. 
 
 ## Installation
@@ -7,13 +6,13 @@ Two methods are recommended here.
 
 ### The first method
 The first method is to use `devtools::install_github()`:
-  library(devtools)
-  install_github("Xiaozhu-Zhang1998/TestPackage", build_vignettes = TRUE)
+    library(devtools)
+    install_github("Xiaozhu-Zhang1998/TestPackage", build_vignettes = TRUE)
 The package will then be stored in the default directory `.libPaths()`. 
 
 ### The second method
 In cases where users might have a weak internet connection, it’s often easier to download the source of the package as a zip file (from the GitHub Repo), and then to install it using `install.packages()`:
-  install.packages(file.choose(), repos = NULL, type = "source")  
+    install.packages(file.choose(), repos = NULL, type = "source")  
 Users can interactively select the file they just downloaded.
 
 
